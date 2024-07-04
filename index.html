@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preconnect with HTTPS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--link de scroll para  css/scss-->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Soro:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Link de scroll para js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Barber Shop </title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="bg-home">
+        <header>
+            <nav class="header-content container" data-aos="fade-down">
+                <div class="header-icons">
+                    <a href="https://www.instagram.com/direct/t/leeutumbo/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                </div>
+                <div class="header-logo"  data-aos="fade-up" data-aos-delay="300">
+                    <img 
+                    data-aos="flip-up"
+                    data-aos-delay="300"
+                    data-aos-duration="1500"
+                    src="assets/logo.svg"
+                    alt="logo da barbearia" />
+                </div>
+                <a 
+                href="https://api.whatsapp.com/send?phone=842024060&text=Quero%20agendar%20um%20corte%20de%20barba"
+               class="header-button" href="#">Agendar horário</a>
+           </nav>
+
+            <main class="hero container" data-aos="fade-up" data-aos-delay="300">
+                <h1>Seu estilo é uma janela aberta que revela sua atitude e personalidade</h1>
+                <p>Horário de funcionamento: 10:00 ás 21:00</p>
+                <a
+                 href="https://api.whatsapp.com/send?phone=842024060&text=Quero%20fazer%20um%20agendamento%20hoje"
+                 class="button-contact"
+                 target="_blank"
+                >
+                    Agendar horário
+                </a>
+            </main>
+
+        </header>
+      
+    </div>
+
+    <!-- Sobre -->
+    <section class="sobre">
+        <div class="container sobre-content">
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <img
+                 src="assets/images.svg" 
+                 alt="Imagem sobre a barbearia" />
+
+            </div>
+            
+            <div 
+            
+            class="sobre-description" 
+            data-aos="zoom-out-left" data-aos-delay="250"
+            
+            >
+            <h2>Sobre</h2>
+            <p>
+                Fundada em 2024 , nossa barbearia se orgulha em ser um refúgio onde tradição e modernidade se encontram. Desde o primeiro dia, nosso objetivo tem sido oferecer não apenas cortes de cabelo, mas uma experiência completa de grooming.
+            </p>
+            <p>
+                Com uma equipe de barbeiros apaixonados e altamente qualificados, trazemos a você técnicas tradicionais de barbearia, combinadas com as últimas tendências e produtos de alta qualidade. Seja para um corte clássico ou um estilo contemporâneo, estamos aqui para atender às suas necessidades com excelência e dedicação.
+            </p>
+            <p>
+                Nossa missão é simples: garantir que cada cliente saia sentindo-se renovado e confiante. Venha nos visitar e descubra por que somos a escolha preferida para cuidados masculinos em Patrice Lumumba.
+            </p>
+            <p>Horário de funcionamento: <strong>10:00</strong> às <strong>21:00</strong></p>
+  
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+
+        <div class="services-content container">
+            <h2>Serviços</h2>
+            <p>  Na nossa barbearia, a sua satisfação é a nossa prioridade.
+                 Cada serviço é personalizado para atender às suas preferências, garantindo que você 
+                 saia sempre satisfeito. Seja para um corte de cabelo, um novo estilo 
+                de barba ou um momento de relaxamento, estamos aqui para oferecer o melhor</p>
+        </div>
+
+        <div class="haircuts">
+            <div class="haircut" data-aos="fade-up" data-aos-delay="250">
+                <img 
+                src="assets/corte1.png" 
+                alt="Corte normal" />
+
+                <div class="haircut-info">
+                    <strong>Corte normal</strong>
+                    <button>MZN 80,00</button>
+                </div>
+            </div>
+            <div class="haircut" data-aos="fade-up" data-aos-delay="350">
+                <img src="assets/corte2.png" alt="Barba completa" />
+                <div class="haircut-info">
+                    <strong>Barba completa</strong>
+                    <button>MZN 50,00</button>
+                </div>
+            </div>
+            <div class="haircut" data-aos="fade-up" data-aos-delay="450">
+                <img src="assets/corte3.png" alt="Corte e barba" />
+                <div class="haircut-info">
+                    <strong>Corte e barba</strong>
+                    <button>MZN 150,00</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!---Footer-->
+        <div class="services">
+            <h2>Venha conhecer</h2>
+        </div>
+        <iframe 
+        width="100%";
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5083.098865150824!2d32.50708617222062!3d-25.89883119845608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee68fe46a64ac2b%3A0xdd2b73967012086b!2sPEP%20Matola%20Patrice%20Lumumba!5e0!3m2!1spt-PT!2smz!4v1720093445404!5m2!1spt-PT!2smz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <footer class="footer">
+            <div class="footer-icons">
+                <div class="footer-icons" data-aos="fade-down">
+                    <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                </div>
+
+            </div>
+            
+            <div>
+                <img 
+                src="assets/logo.svg"
+                alt="Logo barbearia"
+                />
+            </div>
+
+            <p>Copyright 2024| Barbearia -Todos direitos reservados.</p>
+
+        </footer>
+        
+        <!--Butao de whatsapp-->
+        <a 
+        href="https://api.whatsapp.com/send?phone=842024060&text=Quero%20agendar%20um%20corte%20de%20barba"
+        class="btn-whatsapp"
+        target="_blank"
+        data-aos="zoom-in-up" data-aos-delay="400"
+        >
+            <img src="assets/whatssapp.svg" alt="Botao whatsapp"/>
+            <span class="tooltip-text">Agende seu horário</span>
+        </a>
+
+
+
+        
+        <script src="script.js"></script>
+</body>
+
+
+</html>
