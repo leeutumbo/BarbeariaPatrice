@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horário - Barbearia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(28, 27, 27, 0.628);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .appointment-form {
+            background-color: gray;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .appointment-form h2 {
+            margin-bottom: 1rem;
+            color: black;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: black;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+        }
+        .form-group input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #686868;
+        }
+        .confirmation-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1.5rem;
+            position: relative;
+            animation: fadeIn 0.5s ease-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .confirmation-message .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="appointment-form">
+        <h2>Agendamento de Horário</h2>
+        <form id="appointmentForm">
+            <!-- Nome do Cliente -->
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            </div>
+            <!-- Data do Agendamento -->
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+            <!-- Horário do Agendamento -->
+            <div class="form-group">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+            <!-- Botão de Envio -->
+            <div class="form-group">
+                <input type="submit" value="Agendar via WhatsApp">
+            </div>
+        </form>
+        <div class="confirmation-message" id="confirmationMessage">
+            <div class="icon">✔</div>
+            <div>Seu agendamento foi realizado com sucesso!</div>
+            <div>Verifique os detalhes no WhatsApp.</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio real do formulário
+            
+            // Captura os valores dos campos
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            const hora = document.getElementById('hora').value;
+
+            // Exibe a mensagem de confirmação
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.style.display = 'block';
+
+            // Reseta os campos do formulário
+            setTimeout(() => {
+                document.getElementById('appointmentForm').reset();
+                confirmationMessage.style.display = 'none';
+            }, 5000);
+
+            // Cria a mensagem para o WhatsApp
+            const mensagem = `Olá, meu nome é ${nome}. Gostaria de agendar um horário na data ${data} às ${hora}.`;
+            
+            // Criar o link do WhatsApp
+            const telefone = '842024060'; // Substitua pelo número desejado
+            const linkWhatsApp = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+
+            // Redirecionar para o WhatsApp
+            window.open(linkWhatsApp, '_blank');
+        });
+    </script>
+</body>
+</html>
